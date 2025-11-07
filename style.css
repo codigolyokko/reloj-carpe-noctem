@@ -35,6 +35,27 @@
   right: 6vw;
 }
 
+@media (max-width: 768px) {
+  .floating-hand-left {
+    top: 90%;        
+    left: 30%;      
+    width: 250px;    
+    transform: translate(-50%, -50%);
+  }
+
+  .floating-hand-right {
+    top: 90%;
+    right: 30%;
+    width: 250px;
+    transform: translate(50%, -50%); 
+  }
+
+  .timezones-container {
+    top: 40%;       
+  }
+}
+
+
 
 .timezones-container {
   position: fixed;
@@ -68,5 +89,6 @@ footer {
   color: #8f8170;
   opacity: 0.7;
 }
+
 
 
