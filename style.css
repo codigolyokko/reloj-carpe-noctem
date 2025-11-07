@@ -37,24 +37,23 @@
 
 @media (max-width: 768px) {
   .floating-hand-left {
-    top: 100%;        
-    left: 30%;      
-    width: 250px;    
+    top: 15%;        
+    left: 50%;         
+    width: 200px;      
     transform: translate(-50%, -50%);
   }
 
   .floating-hand-right {
-    top: 100%;
-    right: 30%;
-    width: 250px;
-    transform: translate(50%, -50%); 
+    top: 85%;         
+    right: 50%;
+    width: 200px;
+    transform: translate(50%, -50%);
   }
 
   .timezones-container {
-    top: 40%;       
+    top: 50%;          
   }
 }
-
 
 
 .timezones-container {
@@ -89,6 +88,7 @@ footer {
   color: #8f8170;
   opacity: 0.7;
 }
+
 
 
 
