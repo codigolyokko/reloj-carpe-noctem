@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Timezones</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e1b18">
+<style>
+    body {
+    background-color: #1e1b18;
+    color: #d4c4a8;
+    font-family: 'Georgia', serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    }
+    h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    }
+    .clock {
+    background-color: #2b2724;
+    border: 1px solid #3c3733;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    margin: 0.5rem 0;
+    }
+    .location {
+    font-size: 1.2rem;
+    color: #c7b79c;
+    }
+    .time {
+    font-size: 2rem;
+    font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="timezones-container">
+<h1> CARPE NOCTEM </h1>
+
+<div class="clock">
+    <div class="location">España 🇪🇸</div>
+    <div id="timeSpain" class="time"></div>
+</div>
+
+<div class="clock">
+    <div class="location">México 🇲🇽</div>
+    <div id="timeMexico" class="time"></div>
+</div>
+</div>
+
+<script>
+    function updateTime() {
+    const spainTime = new Date().toLocaleTimeString('es-ES', { timeZone: 'Europe/Madrid', hour12: false });
+    const mexicoTime = new Date().toLocaleTimeString('es-MX', { timeZone: 'America/Mexico_City', hour12: false });
+
+    document.getElementById('timeSpain').textContent = spainTime;
+    document.getElementById('timeMexico').textContent = mexicoTime;
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+<img src="mano.png" class="floating-hand-left" alt="mano">
+<img src="mano2.png" class="floating-hand-right" alt="mano">
+<footer><i>Placideque Quiescas</i></footer> 
+</body>
+</html>
